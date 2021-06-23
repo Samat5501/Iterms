@@ -1,12 +1,10 @@
 import "./App.css";
 import { routes } from "./routes";
 import { BrowserRouter, Switch } from "react-router-dom";
-
 // layouts
 import { AuthLayout } from "./layouts/AuthLayout";
 import { MainLayout } from "./layouts/MainLayout";
 import { ProfileLayout } from "./layouts/ProfileLayout";
-
 // pages
 import { UserProfile } from "./pages/UserProfile";
 import { Login } from "./pages/Login";
@@ -32,11 +30,11 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Switch>
-          <MainLayout exact path={routes.home} component={Home} />
           <AuthLayout path={routes.login} component={Login} />
           <AuthLayout path={routes.sign_up} component={SignUp} />
           <ProfileLayout path={routes.user_profile} component={UserProfile} />
-        </Switch>
+         <MainLayout path={routes.home} component={Home} />
+       </Switch>
       </BrowserRouter>
     </div>
   );

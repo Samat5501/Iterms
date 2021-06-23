@@ -65,7 +65,6 @@ export const Header = () => {
                 <Link to={routes.login}>
                     <Button type="text">Log in</Button>
                 </Link>
-                {/* <Link to={routes.user_profile}>Profile</Link> */}
                 <Link to={routes.sign_up}>
                     <CustomButton primary>Sign up</CustomButton>
                 </Link>
